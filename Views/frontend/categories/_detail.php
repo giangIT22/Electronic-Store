@@ -1,15 +1,12 @@
 <main class="main">
-        <section class="main__products">
+        <section class="main__products fix-pd">
             <div class="container">
-                <div class="main__main-title">
-                    <h2 class="main__trending-products">Trending products</h2>
-                    <a href="index.php?controller=product&action=more" class="main__more-products">
-                       More products >
-                   </a>
+                <div class="main__main-title main--flex-center">                
+                    <h2><?= $category['name']?></h2>                   
                 </div>
+
                 <div class="main__main-grid">
-                   
-                   <?php foreach($products as $product): ?>
+                    <?php foreach($products as $product):?>
                         <div class="main__main-item">
                             <div class="main__card-action">
                                 <a href="#" class="btn-action">
@@ -20,22 +17,20 @@
                                 </button>
                             </div>
                             <div class="main__img-products">
-                                <a href="index.php?controller=product&action=show&id=<?= $product['id'] ?>">
-                                    <?php
-                                        $productImage = !empty($product['image']) ? $product['image'] : 'no-image.png';
-                                    ?>
-                                    <img src="./public/uploads/<?= $productImage ;?>" alt="<?=$product['name'];?>">
+                                <a href="detail.html">
+                                    <?php $productImage = !empty($product['image']) ? $product['image'] : 'no-image.png' ?>
+                                    <img src="./public/uploads/<?=$productImage?>" alt="">
                                 </a>
                             </div>
                             <div class="main__info-products">
-                                <a href="#" class="main__product-meta">Headphones</a>
+                                <a href="#" class="main__product-meta"><?=$category['name']?></a>
                                 <h3 class="main__product-title">
-                                    <a href=""><?= $product['name'] ?? ''?></a>
+                                    <a href=""><?=$product['name']?></a>
                                 </h3>
                             </div>
                             <div class="main__product-price-rating">
                                 <div class="product-price">
-                                    <span><?= number_format($product['price'])?></span>
+                                    <span><?=number_format($product['price'])?></span>
                                 </div>
                                 <div class="main__star-rating">
                                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -49,7 +44,7 @@
                                 <a href="#" class="main__cart">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart
                                 </a>
-                                <button class="main__review btn-view"><i class="fa fa-eye" aria-hidden="true"></i>
+                                <button class="main__review btn-view"><i class="fa fa-eye" aria-hidden="true" ></i>
                                     Quick view
                                 </button>
 
@@ -62,8 +57,17 @@
                                             </div>
                             
                                             <div class="main__main-grid">
+                                                <div class="main__img-slide">
+                                                    <img class="thumbnail" src="./image/th05.jpg" alt="">
+                                                    <img class="thumbnail" src="./image/th06.jpg" alt="">
+                                                    <img class="thumbnail" src="./image/th07.jpg" alt="">
+                                                    <img class="thumbnail" src="./image/th08.jpg" alt="">
+                                                </div>
                                                 <div class="main__img-product">
-                                                    <img src="./image/58.jpg" alt="">
+                                                    <img class="featured"  src="./image/05 (3).jpg" alt="">
+                                                    <img class="featured"  src="./image/06 (7).jpg" alt="">
+                                                    <img class="featured"  src="./image/07 (5).jpg" alt="">
+                                                    <img class="featured"  src="./image/08 (3).jpg" alt="">
                                                 </div>
                                                 <ul class="info-product">
                                                     <li><h2>Name product</h2></li>
@@ -80,8 +84,7 @@
                                 </div>
                             </div>
                         </div>
-                   <?php endforeach; ?>
-                   
-                </div>
+                    <?php endforeach;?>
             </div>
         </section>
+    </main>

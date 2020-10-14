@@ -92,7 +92,7 @@
                                     <span>Departments</span>
                                     <div class="heading__dropdown-menu">
                                         <?php foreach($categories as $category):?>
-                                            <a href="#">
+                                            <a href="index.php?controller=category&action=show&id=<?=$category['id']?>">
                                                 <?=$category['name']?>
                                             </a>                     
                                         <?php endforeach;?>    

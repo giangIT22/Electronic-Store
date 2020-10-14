@@ -25,4 +25,15 @@ class ProductController extends BaseController{
             'categories'  => $categories
         ]);
     }
+
+    public function more(){
+        $categories = $this->categoryModel->getAll();
+        $categoryId = $_GET['id'] ?? 24;
+        $products = $this->productModel->getListProducts($categoryId);
+
+        return $this->view('frontend.products.more',[
+            'categories' => $categories,
+            'products'   => $products,
+        ]);
+    }
 }

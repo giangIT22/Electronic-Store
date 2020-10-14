@@ -78,6 +78,14 @@ class ProductModel extends BaseModel{
         return $this->getByQuery($sql);
     }
 
+    public function getListProducts($id)
+    {
+        $sql = "SELECT products.*, categories.name as category_name FROM products
+            JOIN categories ON products.category_id = categories.id WHERE products.category_id=${id}" ;
+
+        return $this->getByQuery($sql);
+    }
+
     public function deleteProductByIdCategory($id){
         $sql = "DELETE FROM products WHERE category_id = ${id} " ;
         $this->_query($sql);
