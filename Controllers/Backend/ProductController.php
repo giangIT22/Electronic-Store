@@ -144,4 +144,67 @@ class ProductController extends BaseController{
 
         return count($errors) ===  0;
     }
+
+    public function addImage(){
+        $id = $_GET['id'] ?? null;
+
+        $product = $this->productModel->findProductById(['*'], $_GET['id']);
+        $images = $this->productImageModel->getByProductId($id);
+
+        return $this->view('backend.products.images', [
+            'images' => $images,
+            'product' => $product,
+            'created_at' => time(),
+        ]);
+    }
+
+    public function uploadImage(){
+        $imageValid = true;
+
+        if (empty($_GET['id'])) {
+            $imageValid = false;
+            $errors['image'] = 'Vui lòng truyền ID sản phẩm';
+        } else if (empty($_FILES['image']['name'])) {
+            $imageValid = false;
+            $errors['image'] = 'Vui lòng chọn ảnh cần upload';
+        } else if ($type = explode('/', $_FILES['image']['type'])) {
+            $type = explode('/', $_FILES['image']['type']);
+
+            if ($type[0] != 'image') {
+                $imageValid = false;
+                $errors['image'] = 'Ảnh không đúng định dạng';
+            }
+        }
+
+        if (!$imageValid) {
+
+            $images = $this->productImageModel->getByProductId($_GET['id']);
+            $product = $this->productModel->findProductById(['*'], $_GET['id']);
+
+            return $this->view('backend.products.images', [
+                'images' => $images,
+                'product' => $product,
+                'errors' => $errors
+            ]);
+        }
+
+        $image = $this->getImage();
+       
+        if ($image) {
+            $this->productImageModel->createData([
+                'name'       => $image,
+                'product_id' => $_GET['id']
+            ]);
+        }
+
+        header('location:index.php?module=backend&controller=product&action=addImage&id=' . $_GET['id']);
+    }
+
+    public function deleteImage(){
+        $id = $_GET['id'] ?? null;
+        if($id){
+            $this->productImageModel->destroy($id);
+            header('location:index.php?module=backend&controller=product&action=addImage&id=' . $_GET['product_id']);
+        }
+    }
 }

@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <div class="main__cart-review">
-                                <a href="#" class="main__cart">
+                                <a href="index.php?controller=cart&action=store&id=<?=$product['id']?>" class="main__cart">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart
                                 </a>
                                 <button class="main__review btn-view"><i class="fa fa-eye" aria-hidden="true"></i>

@@ -29,6 +29,7 @@
                                                     <td><?= $product['category_name']?></td>
                                                     <td><?= $product['created_at']?></td>                                                                                                                                       
                                                     <td>
+                                                        <a href="index.php?module=backend&controller=product&action=addImage&id=<?=$product['id']?>">Thêm ảnh |</a>
                                                         <a href="index.php?module=backend&controller=product&action=edit&id=<?=$product['id']?>">Sửa |</a>
                                                         <a href="index.php?module=backend&controller=product&action=delete&id=<?=$product['id']?>" onclick="return confirm('Bạn có muốn xóa ?')">Xóa</a>
                                                     </td>

@@ -26,16 +26,12 @@
     
                     <div class="main__main-grid">
                         <div class="main__img-slide">
-                            <img class="thumbnail" src="./public/frontend/image/th05.jpg" alt="">
-                            <img class="thumbnail" src="./public/frontend/image/th06.jpg" alt="">
-                            <img class="thumbnail" src="./public/frontend/image/th07.jpg" alt="">
-                            <img class="thumbnail" src="./public/frontend/image/th08.jpg" alt="">
+                            <?php foreach($images as $image):?>
+                                <img src="./public/uploads/<?=$image['name']?>" class="thumbnail" alt="">
+                            <?php endforeach; ?>                              
                         </div>
                         <div class="main__img-product">
-                            <img class="featured"  src="./public/frontend/image/05 (3).jpg" alt="">
-                            <img class="featured"  src="./public/frontend/image/06 (7).jpg" alt="">
-                            <img class="featured"  src="./public/frontend/image/07 (5).jpg" alt="">
-                            <img class="featured"  src="./public/frontend/image/08 (3).jpg" alt="">
+                           <img class="featured" src="./public/uploads/<?= !empty($product['image']) ? $product['image'] : 'no-image.png' ?>" alt="$product['image']">
                         </div>
                         <ul class="info-product">
                             <li><h2><?= $product['name']?></h2></li>

@@ -3,11 +3,14 @@
 class ProductController extends BaseController{
     protected $productModel;
     protected $categoryModel;
+    protected $productImageModel;
     public function __construct(){
         $this->loadModel('ProductModel');
         $this->loadModel('CategoryModel');
-        $this->productModel = new ProductModel;     
-        $this->categoryModel = new CategoryModel;   
+        $this->loadModel('ProductImageModel');
+        $this->productModel       = new ProductModel;     
+        $this->categoryModel      = new CategoryModel;
+        $this->productImageModel  = new ProductImageModel; 
     }
 
     public function index(){
@@ -19,10 +22,12 @@ class ProductController extends BaseController{
         $categories = $this->categoryModel->getAll();
         $product = $this->productModel->findProductById(['*'], $productId);
         $products = $this->productModel->getByCategoryId($product['category_id'], $productId);
+        $images = $this->productImageModel->getByProductId($productId);
         return $this->view('frontend.products.show',[
             'product'     => $product,
             'products'    => $products,
-            'categories'  => $categories
+            'categories'  => $categories,
+            'images'      => $images
         ]);
     }
 

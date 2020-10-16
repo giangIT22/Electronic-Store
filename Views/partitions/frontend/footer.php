@@ -90,7 +90,7 @@
                 <div class="footer__footer-grid">
                     <div class="footer__footer-item">
                         <a class="footer__logo">
-                            <img src="./image/footer-logo-light.png" alt="">
+                            <img src="./public/image/footer-logo-light.png" alt="">
                         </a>
                         <ul class="footer__widget-list">
                             <li>
@@ -151,15 +151,16 @@
                 $('.main__modal-product').fadeOut(100);
             })
             //======detail product quick
-            $('.main__img-product .featured:first').show();
-             $('.thumbnail:first').addClass('active');
+            $('.main__img-product .featured').show();
+            $('.thumbnail:first').addClass('active');
 
              $('.thumbnail').click(function(){
-                let index = $(this).index();
                 $('.thumbnail').removeClass('active');
                 $(this).addClass('active');
-                $('.featured').hide();
-                $('.featured').eq(index).fadeIn(500); 
+                let val = $(this).attr('src');
+                $('.main__img-product .featured').hide();
+                $('.main__img-product .featured').attr('src',val);
+                $('.main__img-product .featured').fadeIn();
             })
 
             //===============btn back to top============

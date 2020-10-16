@@ -8,7 +8,7 @@ class ProductImageModel extends BaseModel{
 
     public function getByProductId($id)
     {
-    	$sql = "SELECT * FROM product_images WHERE product_id='" . $id . "'";
+    	$sql = "SELECT * FROM product_images WHERE product_id=" . $id;
     	
     	return $this->getByQuery($sql);
     }

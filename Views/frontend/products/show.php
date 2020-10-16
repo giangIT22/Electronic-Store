@@ -1,10 +1,11 @@
 <?php
 
 view('partitions.frontend.header',[
-    'categories' => $categories
+    'categories' => $categories ?? []
 ]);
 view('frontend.products._detail',[
     'product' => $product,
-    'products'=> $products
+    'products'=> $products ?? [],
+    'images' => $images ?? []
 ]);
 view('partitions.frontend.footer');
