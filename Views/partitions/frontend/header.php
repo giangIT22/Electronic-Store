@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./public/frontend/css/style.css">
+    <link rel="stylesheet" href="./public/frontend/css/cart/style.css">
+    <link rel="stylesheet" href="./public/frontend/css/shop/style.css">
 </head>
 
 <body>    
@@ -76,7 +78,7 @@
                             <i class="fa fa-user-o" aria-hidden="true"></i>
                             <span class="heading--hidden">My Account</span>
                         </a>
-                        <a href="order.html" class="heading__heading-item">
+                        <a href="index.php?controller=cart" class="heading__heading-item">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="heading--hidden">My cart</span>
                         </a>
                     </div>
@@ -102,11 +104,11 @@
                         </div>
                         <div class="heading__primary-menu">
                             <ul>
-                                <li><a href="" class="active">Home</a></li>
-                                <li><a href="">Shop</a></li>
+                                <li><a href="index.php?controller=home&action=index" class="home active" >Home</a></li>
+                                <li><a href="index.php?controller=product&action=more" class="shop">Shop</a></li>
                                 <li><a href="">Account</a></li>
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="">Blog</a></li>
+                                <li><a href="about.html" class="about">About us</a></li>
+                                <li><a href="" class="blog">Blog</a></li>
                                 <li><a href="">Docs/Components</a></li>
                             </ul>
                         </div>

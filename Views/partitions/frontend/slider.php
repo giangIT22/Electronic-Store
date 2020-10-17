@@ -49,7 +49,7 @@
                                         <h2>World of music with</h2>
                                         <h1>Headphones</h1>
                                         <h5>Choose between top brands</h5>
-                                        <a href="#">
+                                        <a href="index.php?controller=category&action=show&id=26">
                                     shop Now >
                                      </a>
                                     </div>
@@ -60,9 +60,9 @@
                                 <div class="heading__heading-item">
                                     <div class="heading__info">
                                         <h2>World of music with</h2>
-                                        <h1>Headphones</h1>
+                                        <h1>Smart TV</h1>
                                         <h5>Choose between top brands</h5>
-                                        <a href="#">
+                                        <a href="index.php?controller=category&action=show&id=29">
                                     Shop Now >
                                      </a>
                                     </div>
@@ -73,9 +73,9 @@
                                 <div class="heading__heading-item">
                                     <div class="heading__info">
                                         <h2>World of music with</h2>
-                                        <h1>Headphones</h1>
+                                        <h1>Smart Phone</h1>
                                         <h5>Choose between top brands</h5>
-                                        <a href="#">
+                                        <a href="index.php?controller=category&action=show&id=24">
                                     shop Now >
                                      </a>
                                     </div>

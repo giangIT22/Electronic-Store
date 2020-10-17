@@ -28,7 +28,7 @@
                                 </a>
                             </div>
                             <div class="main__info-products">
-                                <a href="#" class="main__product-meta">Headphones</a>
+                                <a href="#" class="main__product-meta"><?=$product['category_name']?></a>
                                 <h3 class="main__product-title">
                                     <a href=""><?= $product['name'] ?? ''?></a>
                                 </h3>

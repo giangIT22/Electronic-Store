@@ -150,6 +150,7 @@
                 // $('body').removeClass('modal-open');
                 $('.main__modal-product').fadeOut(100);
             })
+            
             //======detail product quick
             $('.main__img-product .featured').show();
             $('.thumbnail:first').addClass('active');
@@ -176,7 +177,31 @@
             $(".top-btn").click(function(){
                 $('html, body').animate({scrollTop :0},500);
             });
+
+            $('.main__filter').click(function(){
+                $('.main__categories').addClass('show');
+
+            })
+
+            $('.main__close-category').click(function(){
+                $('.main__categories').removeClass('show');
+            })
         })
+
+        <?php if($_GET['controller'] == 'product' &&$_GET['action'] == 'more') :?>            
+                $(()=>{
+                    $('a.shop').addClass('active');
+                    $('a.home').removeClass('active');                     
+                })
+        <?php endif; ?>
+
+        <?php if($_GET['controller'] == 'home' && $_GET['action'] == 'index') :?>
+                $(()=>{
+                    $('a.home').addClass('active');
+                    $('a.shop').removeClass('active');                       
+                })
+        <?php endif; ?>
+
     </script>
 </body>
 

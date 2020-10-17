@@ -73,7 +73,7 @@ class ProductModel extends BaseModel{
     public function getProducts()
     {
         $sql = "SELECT products.*, categories.name as category_name FROM products
-            JOIN categories ON products.category_id = categories.id ORDER BY id DESC" ;
+            JOIN categories ON products.category_id = categories.id ORDER BY id DESC LIMIT 8" ;
 
         return $this->getByQuery($sql);
     }

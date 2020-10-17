@@ -6,15 +6,15 @@
                             <h1>Your cart</h1>
                         </div>
                         <ul>
-                            <li><a href="#">Home ></a></li>
-                            <li><a href="#">category ></a></li>
-                            <li><a href="#">cart </a></li>
+                            <li><a href="index.php">Home ></a></li>
+                            <li><a href="index.php?controller=product&action=more">Shop ></a></li>
+                            <li><a href="#" style="color:#fe696a;">cart </a></li>
                         </ul>
                     </div>
                     <div class="main__main-grid">
                         <div class="main__main-item">
                             <h2>Products</h2>
-                            <a href="index.php">< Continue Shopping</a>
+                            <a href="index.php?controller=product&action=more">< Continue Shopping</a>
                         </div>
                    </div>
             </section>
@@ -74,4 +74,15 @@
         margin-top: 7px !important;
         text-align: left;
     }
+
+    /* =====================responsive============== */
+
+    /* @media screen and (max-width:479px){
+        .main .main__page-title .main__main-grid:first-child{
+            flex-direction: column;
+        }
+        .main .main__page-title .main__product-name h1{
+            margin-bottom
+        }
+    } */
 </style>

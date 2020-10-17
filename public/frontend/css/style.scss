@@ -4,7 +4,10 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+.active{
+    color: #fe696a;
+    
+}
 body {
     font-family: 'Rubik', sans-serif;
 }
@@ -1735,6 +1738,7 @@ body {
                 }
             }
         }
+
     }
     .footer {
         .footer__footer-grid {

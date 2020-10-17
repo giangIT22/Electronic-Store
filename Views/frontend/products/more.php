@@ -12,17 +12,26 @@ view('partitions.frontend.header',[
                         <h1>Shopping products</h1>
                     </div>
                     <ul>
-                        <li><a href="#">Home ></a></li>
-                        <li><a href="#">Shop </a></li>
+                        <li><a href="index.php">Home ></a></li>
+                        <li><a href="#" >Shop > </a></li>
+                        <li><a href="#" style="color:#FE696A;"><?=$category['name'] ?? ''?></a></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section class="main__products">
-            <div class="container">
+            <button class="main__filter" style="display:none;">
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+            </button>
+
+            <div class="container"> 
                 <div class="main__show-item">
                     <div class="main__categories">
+                        <button class="main__close-category" style="opacity:0; visibility:hidden;">
+                            <span>Close sidebar</span>
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </button>   
                         <h3>Categories</h3>
                         <ul>
                             <?php foreach($categories as $category):?>
@@ -44,7 +53,7 @@ view('partitions.frontend.header',[
                                         </button>
                                     </div>
                                     <div class="main__img-products">
-                                        <a href="detail.html">
+                                        <a href="index.php?controller=product&action=show&id=<?= $product['id'] ?>">
                                             <?php
                                                 $productImage = !empty($product['image']) ? $product['image'] : 'no-image.png';
                                             ?>

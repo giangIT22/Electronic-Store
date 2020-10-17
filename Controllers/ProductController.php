@@ -34,11 +34,12 @@ class ProductController extends BaseController{
     public function more(){
         $categories = $this->categoryModel->getAll();
         $categoryId = $_GET['id'] ?? 24;
-        $products = $this->productModel->getListProducts($categoryId);
-
+        $products   = $this->productModel->getListProducts($categoryId);
+        $category   = $this->categoryModel->findCategoryById(['*'],$categoryId);
         return $this->view('frontend.products.more',[
             'categories' => $categories,
             'products'   => $products,
+            'category'   => $category
         ]);
     }
 }
