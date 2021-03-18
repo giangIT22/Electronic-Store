@@ -2,9 +2,9 @@
   <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="index.php?module=backend&controller=dashboar">
           <i class="mdi mdi-home menu-icon"></i>
-          <span class="menu-title">Trang chủ bán hàng</span>
+          <span class="menu-title">Trang chủ</span>
         </a>
       </li>
       <li class="nav-item">

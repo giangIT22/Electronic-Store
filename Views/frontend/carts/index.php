@@ -5,6 +5,6 @@ view('partitions.frontend.header',[
 ]);
 
 view('frontend.carts._list',[
-    'products' => $products
+    'products' => $products ?? []
 ]);
 view('partitions.frontend.footer');

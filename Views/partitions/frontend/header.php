@@ -74,7 +74,7 @@
                     <div class="heading__group-item">
                         <span class="heading--menu"><i class="fa fa-bars" aria-hidden="true"></i>
                         </span>
-                        <a href="#" class="heading__heading-item">
+                        <a href="index.php?module=backend&controller=verify" class="heading__heading-item">
                             <i class="fa fa-user-o" aria-hidden="true"></i>
                             <span class="heading--hidden">My Account</span>
                         </a>
