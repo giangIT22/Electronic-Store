@@ -7,12 +7,14 @@ require './Models/BaseModel.php';
 require './Controllers/BaseController.php';
 $controllerName = ucfirst((strtolower($_REQUEST['controller'] ?? 'home')) .'Controller');
 
-$moduleName = $_GET['module'] ?? null;
-
 $actionName = $_REQUEST['action'] ?? 'index';
 
-if($moduleName == 'backend'){
+$moduleName = !empty($_GET['module']) ? $_GET['module'] : null;
+
+if($moduleName === "backend"){
     $controllerFile = "./Controllers/Backend/${controllerName}.php";
+    echo $controllerFile;
+    die();
 }else{
     $controllerFile = "./Controllers/${controllerName}.php";
 }
