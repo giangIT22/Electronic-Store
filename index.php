@@ -11,7 +11,7 @@ $moduleName = $_GET['module'] ?? null;
 
 $actionName = $_REQUEST['action'] ?? 'index';
 
-if($moduleName === 'backend'){
+if($moduleName == 'backend'){
     $controllerFile = "./Controllers/Backend/${controllerName}.php";
 }else{
     $controllerFile = "./Controllers/${controllerName}.php";
