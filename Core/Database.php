@@ -3,21 +3,21 @@
 // mục tiêu của File này là để sử lý database thực hiện các công việc như connect
 class Database{
 
-    // const HOST = 'sql200.epizy.com';
+    const HOST = 'remotemysql.com';
 
-    // const USERNAME = 'epiz_28167160';
+    const USERNAME = 'BCVZPDJiJg';
 
-    // const PASSWORD = 'XqpanHfOst';
+    const PASSWORD = 'nvQkXgeqke';
 
-    // const DB_NAME = 'epiz_28167160_shop_electronic';
+    const DB_NAME = 'BCVZPDJiJg';
 
-    const HOST = 'localhost';
+    // const HOST = 'localhost';
 
-    const USERNAME = 'root';
+    // const USERNAME = 'root';
 
-    const PASSWORD = '';
+    // const PASSWORD = '';
 
-    const DB_NAME = 'electronic shop';
+    // const DB_NAME = 'electronic shop';
     
 
     public function connect(){
