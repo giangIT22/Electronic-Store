@@ -14,6 +14,11 @@ $moduleName = !empty($_GET['module']) ? $_GET['module'] : null;
 if($moduleName === "backend"){
     $controllerFile = "./Controllers/Backend/${controllerName}.php";
     echo $controllerFile;
+    if(file_exists($controllerFile)){
+        echo " đúng";
+    }else{
+        echo "sai";
+    }
     die();
 }else{
     $controllerFile = "./Controllers/${controllerName}.php";
