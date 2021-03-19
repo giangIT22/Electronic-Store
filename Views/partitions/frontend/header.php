@@ -55,8 +55,8 @@
                 <div class="heading__heading-grid">
                     <div class="heading__heading-item">
                         <div class="heading__logo">
-                            <a href="#"> <img class="img-1" src="./public/frontend/image/logo-dark.png" alt=""></a>
-                            <a href="#"><img class="img-2" src="./public/frontend/image/logo-icon.png" alt="">
+                            <a href="index.php"> <img class="img-1" src="./public/frontend/image/logo-dark.png" alt=""></a>
+                            <a href="index.php"><img class="img-2" src="./public/frontend/image/logo-icon.png" alt="">
                             </div></a>
                     </div>
                     <div class="heading__heading-item">

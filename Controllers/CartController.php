@@ -31,7 +31,6 @@ class CartController extends BaseController{
         }else{
             $_SESSION['cartProduct'][$productId]['qty'] +=1;
         }
-
         header('location:index.php?controller=cart');
     }
     

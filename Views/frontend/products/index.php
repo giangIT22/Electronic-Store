@@ -53,7 +53,7 @@
                                     Quick view
                                 </button>
 
-                                <div class="main__modal-product">
+                                <!-- <div class="main__modal-product">
                                     <div class="container">
                                         <div class="main__product">
                                             <div class="main__main-grid">                                         
@@ -77,7 +77,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                    <?php endforeach; ?>

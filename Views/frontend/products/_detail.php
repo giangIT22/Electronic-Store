@@ -39,7 +39,7 @@
                             <li><span>SKU :</span> <?= $product['sku']?></li>
                             <li><span>product type :</span> product type</li>
                             <li>
-                                <button> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</button>
+                                <a href="index.php?controller=cart&action=store&id=<?=$product['id']?>" style="padding: 10px 20px;color:#fff;background:#f55"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
                             </li>
                         </ul>
                     </div>
