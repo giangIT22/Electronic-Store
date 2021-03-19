@@ -12,7 +12,7 @@ $actionName = $_REQUEST['action'] ?? 'index';
 $moduleName = !empty($_GET['module']) ? $_GET['module'] : null;
 
 if($moduleName === "backend"){
-    $controllerFile = "./Controllers/Backend/${controllerName}.php";
+    $controllerFile = "./Controllers/Backend/index.php";
 }else{
     $controllerFile = "./Controllers/${controllerName}.php";
 }

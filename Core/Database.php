@@ -3,21 +3,22 @@
 // mục tiêu của File này là để sử lý database thực hiện các công việc như connect
 class Database{
 
-    const HOST = 'remotemysql.com';
+    //deploy to  heroku app
+    // const HOST = 'remotemysql.com';
 
-    const USERNAME = 'BCVZPDJiJg';
+    // const USERNAME = 'BCVZPDJiJg';
 
-    const PASSWORD = 'nvQkXgeqke';
+    // const PASSWORD = 'nvQkXgeqke';
 
-    const DB_NAME = 'BCVZPDJiJg';
+    // const DB_NAME = 'BCVZPDJiJg';
 
-    // const HOST = 'localhost';
+    const HOST = 'localhost';
 
-    // const USERNAME = 'root';
+    const USERNAME = 'root';
 
-    // const PASSWORD = '';
+    const PASSWORD = '';
 
-    // const DB_NAME = 'electronic shop';
+    const DB_NAME = 'electronic shop';
     
 
     public function connect(){
