@@ -37,7 +37,7 @@
                             <li><h2><?= $product['name']?></h2></li>
                             <li><h3><?= number_format($product['price'])?></h3></li>
                             <li><span>SKU :</span> <?= $product['sku']?></li>
-                            <li><span>product type :</span> product type</li>
+                            <li><span>Product type :</span> <?=$product['category_name']?></li>
                             <li>
                                 <a href="index.php?controller=cart&action=store&id=<?=$product['id']?>" style="padding: 10px 20px;color:#fff;background:#f55"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to cart</a>
                             </li>

@@ -50,7 +50,7 @@
                                         <h1>Headphones</h1>
                                         <h5>Choose between top brands</h5>
                                         <a href="index.php?controller=category&action=show&id=26">
-                                    shop Now >
+                                    Shop Now >
                                      </a>
                                     </div>
                                     <div class="heading__img">
@@ -76,7 +76,7 @@
                                         <h1>Smart Phone</h1>
                                         <h5>Choose between top brands</h5>
                                         <a href="index.php?controller=category&action=show&id=24">
-                                    shop Now >
+                                    Shop Now >
                                      </a>
                                     </div>
                                     <div class="heading__img">

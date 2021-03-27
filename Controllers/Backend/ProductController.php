@@ -207,4 +207,12 @@ class ProductController extends BaseController{
             header('location:index.php?module=backend&controller=product&action=addImage&id=' . $_GET['product_id']);
         }
     }
+
+    public function search(){
+        $productName = $_POST['product_name'] ?? null;
+        $products = $this->productModel->searchProduct($productName);
+        return view('backend.products.search',[
+            'products' => $products
+        ]);
+    }
 }

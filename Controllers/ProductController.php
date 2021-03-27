@@ -20,7 +20,7 @@ class ProductController extends BaseController{
     public function show(){
         $productId = $_GET['id'] ?? null;
         $categories = $this->categoryModel->getAll();
-        $product = $this->productModel->findProductById(['*'], $productId);
+        $product = $this->productModel->getProductById($productId);
         $products = $this->productModel->getByCategoryId($product['category_id'], $productId);
         $images = $this->productImageModel->getByProductId($productId);
         return $this->view('frontend.products.show',[

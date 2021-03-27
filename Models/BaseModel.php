@@ -55,7 +55,7 @@ class BaseModel extends Database{
         $query = $this->_query($sql);
         $data = [];
 
-        while($row = mysqli_fetch_assoc($query)){
+        while(($row = mysqli_fetch_assoc($query))){
             array_push($data, $row);
         }
         return $data;

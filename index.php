@@ -9,10 +9,10 @@ $controllerName = ucfirst((strtolower($_REQUEST['controller'] ?? 'home')) .'Cont
 
 $actionName = $_REQUEST['action'] ?? 'index';
 
-$moduleName = !empty($_GET['module']) ? $_GET['module'] : null;
+$moduleName =  $_GET['module'] ?? null;
 
 if($moduleName === "backend"){
-    $controllerFile = "./Controllers/Backend/index.php";
+    $controllerFile = "./Controllers/Backend/${controllerName}.php";
 }else{
     $controllerFile = "./Controllers/${controllerName}.php";
 }

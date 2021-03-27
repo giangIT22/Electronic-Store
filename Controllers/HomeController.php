@@ -11,7 +11,7 @@ class HomeController extends BaseController{
     }
 
     public function index(){
-        $products = $this->productModel-> getProducts();
+        $products = $this->productModel-> getProducts(8);
         $categories = $this->categoryModel->getAll();
         return $this->view('frontend.home.index',[
             'products'  => $products,

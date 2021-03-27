@@ -1,7 +1,7 @@
 <main class="main">
         <section class="main__products">
             <div class="container">
-                <div class="main__main-title">
+                <div class="main__main-title" style="margin-bottom:150px;">
                     <h2 class="main__trending-products">Trending products</h2>
                     <a href="index.php?controller=product&action=more" class="main__more-products">
                        More products >
@@ -10,7 +10,7 @@
                 <div class="main__main-grid">
                    
                    <?php foreach($products as $product): ?>
-                        <div class="main__main-item">
+                        <div class="main__main-item" style="margin-top: -70px;">
                             <div class="main__card-action">
                                 <a href="#" class="btn-action">
                                     <i class="fa fa-refresh" aria-hidden="true"></i> Compare
